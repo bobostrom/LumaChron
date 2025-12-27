@@ -11,7 +11,7 @@ colorChronDict = {}
 
 
 
-colorChronDict = {}
+
 
 class SocketSerialAdapter:
     def __init__(self, ip, port, timeout=2):

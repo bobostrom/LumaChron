@@ -59,7 +59,11 @@ sudo ./build/LumaChronDisplay
 Run on your control PC.
 *   **TCP Mode** (Development/WiFi):
     ```bash
+    # Remote Control
     python pc_controller/pyApp.py --tcp <PI_IP_ADDRESS>
+    
+    # Local Loopback (Running on the Pi itself)
+    python pc_controller/pyApp.py --tcp 127.0.0.1
     ```
 *   **Serial Mode** (Production/LoRa):
     ```bash
