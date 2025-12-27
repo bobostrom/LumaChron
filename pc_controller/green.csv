@@ -1,0 +1,2 @@
+#tenths,      seconds,   minutes,   #hours,  days,  symbolColor,      colonColor,      dpColor,       secColor,   mode, symbolBlink, colonBlink,   dpBlink, brightness
+00,          00,        00,        00,     00,    0x00 FF 00,       0xFF 00 00,       0xFF 00 00,   0x00 00 FF,  AUTO  , 00,             09,             03, 0x08

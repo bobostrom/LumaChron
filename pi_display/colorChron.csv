@@ -1,0 +1,18 @@
+#tenths,      seconds,   minutes,   hours,  days,  symbolColor,      colonColor,      dpColor,       ,secondsColor, mode, symbolBlink, colonBlink,   dpBlink, brightness
+00,          00,        00,        00,     00,    HOTPINK,          0xFF 00 00,       0xFF 00 00,   0xFF 00 00, AUTO  , 00,             09,             03, 0x0F
+00,          04,        00,        00,     00,    GREEN,            0x00 FF 00,       0x00 FF 00,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          08,        00,        00,     00,    LAVENDER,         0x00 00 FF,       0x00 00 FF,   0xFF 00 00, AUTO  , 00,             09,             03, 0x0F
+00,          12,        00,        00,     00,    EngineeringInternationalOrange,       0xFF 00 00,       0xFF 00 00,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          16,        00,        00,     00,    0x40 C0 00,       0x00 FF 00,       0x00 FF 00,   0xFF 00 00, AUTO  , 00,             09,             03, 0x0F
+00,          20,        00,        00,     00,    0x50 B0 00,       0x00 00 FF,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          24,        00,        00,     00,    0x60 A0 00,       0xFF 00 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          28,        00,        00,     00,    0x70 90 00,       0x00 FF 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          32,        00,        00,     00,    0x80 80 00,       0x00 00 FF,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          37,        00,        00,     00,    0x90 70 00,       0xFF 00 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          41,        00,        00,     00,    0xA0 60 00,       0x00 FF 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          45,        00,        00,     00,    0xB0 50 00,       0x00 00 FF,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          48,        00,        00,     00,    0xC0 40 00,       0xFF 00 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          53,        00,        00,     00,    0xD0 30 00,       0x00 FF 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          57,        00,        00,     00,    0xE0 20 00,       0x00 00 FF,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          58,        00,        00,     00,    0xF0 10 00,       0xFF 00 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F
+00,          59,        00,        00,     00,    0xFF 00 00,       0x00 FF 00,       0x00 00 FF,   0xFF 00 00, HHMMSS, 00,             09,             03, 0x0F

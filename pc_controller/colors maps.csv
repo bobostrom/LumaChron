@@ -1,0 +1,40 @@
+   
+    //need to use exception handling because the colorMap is not guaranteed to have the key
+    //also had to include in the CMakelists.txt a line set(PICO_CXX_ENABLE_EXCEPTIONS 1) to enable exceptions
+    //this adds 2k to the binary size(?CoPilot says 2k, but I didn't check the size before adding this line)
+    try {
+        /****************************************************************************************************************************************************************************************/
+        /** Color setup for XC ski race                                                                                                                                                       /**/
+        /** first the list of colors                                                                                                                                                          /**/
+        /**/RGB symbolGoColor = cM.rgbMap.at("LAWNGREEN");                                                                                                                                    /**/
+        /**/RGB symbolStopColor = cM.rgbMap.at("RED1");                                                                                                                                       /**/
+        /**/RGB colonStopColor = cM.rgbMap.at("BLUE");                                                                                                                                        /**/
+        /**/RGB colonGoColor = cM.rgbMap.at("RED1");                                                                                                                                          /**/
+        /**/colorList.assign({                                                                                                                                                                /**/
+        /**set up to start every 30 seconds with the go color with a +/- 3 second window                                                                                                      /**/
+        /**switch back to stop color after the go window is over                                                                                                                              /**/
+        /**                 tenths, seconds,    minutes,    hours,  days,   symbolColor,        colonColor,     dpColor,                mode,               symbolBlink,    colonBlink, dpBlink**/
+        /**/    colorCron(  +0000,  +00,        +00,        +00,    +00,    symbolGoColor,      colonGoColor,   RGB(0xFF,0x00,0x00),    colorCron::AUTO,    0x00,           0x00,       0x00),/**/
+        /**/    colorCron(  -0001,  +03,        -01,        -01,    -01,    symbolStopColor,    colonStopColor, RGB(0x00,0xFF,0x00),    colorCron::AUTO,    0x00,           0x00,       0x00),/**/
+        /**/    colorCron(  -0001,  +27,        -01,        -01,    -01,    symbolGoColor,      colonGoColor,   RGB(0xFF,0x00,0x00),    colorCron::AUTO,    0x00,           0x00,       0x00),/**/
+        /**/    colorCron(  -0001,  +33,        -01,        -01,    -01,    symbolStopColor,    colonStopColor, RGB(0x00,0xFF,0x00),    colorCron::AUTO,    0x00,           0x00,       0x00),/**/
+        /**/    colorCron(  -0001,  +57,        -01,        -01,    -01,    symbolGoColor,      colonGoColor,   RGB(0xFF,0x00,0x00),    colorCron::AUTO,    0x00,           0x00,       0x00),/**/
+        /****************************************************************************************************************************************************************************************/
+        });
+        /************************************************************************************************************************************************************************************************/
+        /** Color setup for progressing from green to yellow to red over a minute                                                                                                                     /**/                                                                                 /**/
+        /**                                                                                                                                                                                           /**/
+        /**/colorList.assign({                                                                                                                                                                        /**/
+        /**                                                                                                                                                                                           /**/
+        /**                                                                                                                                                                                           /**/
+        /**                 tenths, seconds,    minutes,    hours,  days,   symbolColor,        colonColor,           dpColor,                mode,                 symbolBlink,    colonBlink, dpBlink**/
+        /**/    colorCron(  -0000,  +00,        -00,        -00,    -00,    RGB(  0,255,0x00),  RGB(255,  0,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::AUTO  ,    0x00,           0x0A,       0x03),/**/
+        /**/    colorCron(  -0000,  +05,        -00,        -00,    -00,    RGB(  0,255,0x00),  RGB(255,  0,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x0A,       0x03),/**/
+        /**/    colorCron(  -0000,  +10,        -00,        -00,    -00,    RGB( 42,170,0x00),  RGB(170, 42,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x07,       0x03),/**/
+        /**/    colorCron(  -0000,  +20,        -00,        -00,    -00,    RGB( 84,128,0x00),  RGB(128, 84,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x05,       0x03),/**/
+        /**/    colorCron(  -0000,  +30,        -00,        -00,    -00,    RGB(128, 84,0x00),  RGB( 84,128,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x03,       0x03),/**/
+        /**/    colorCron(  -0000,  +40,        -00,        -00,    -00,    RGB(170, 42,0x00),  RGB( 42,170,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x02,       0x03),/**/
+        /**/    colorCron(  -0000,  +50,        -00,        -00,    -00,    RGB(255,  0,0x00),  RGB(  0,255,0x00),    RGB(0x00,0xFF,0xFF),    colorCron::HHMMSS,    0x00,           0x01,       0x03),/**/
+        /************************************************************************************************************************************************************************************************/
+        });
+    }

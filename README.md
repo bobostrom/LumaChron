@@ -9,8 +9,8 @@
 
 ## Architecture
 
-*   **PC Controller** (`pc_controller/`): Optional GUI for centralized race management and remote display control.
-*   **PI Display** (`pi_display/`): The core Race Control logic, handling GPS/PPS timing, race state, and LoRa communications.
+*   **PC Controller** (`pc_controller/`): **Python-based** GUI for centralized race management and remote display control (via LoRa or TCP).
+*   **PI Display** (`pi_display/`): **C++ Application** handling the core Race Control logic, GPS/PPS timing, and I2C/LoRa communications.
 *   **RP2040 Digit Firmware** (`digit_firmware/`): Firmware for the 7-segment display controllers.
 
 ## Time Synchronization Strategy
@@ -44,3 +44,24 @@ LumaChron/
 *   **Visuals**: WS2812B "NeoPixel" driven segments
 *   **Behavior**: Stateless (Updates segments based on received I2C commands)
 
+## Build & Run Instructions
+
+### 1. PI Display (C++)
+Run these commands on the Raspberry Pi:
+```bash
+cd pi_display
+cmake -S . -B build
+cmake --build build
+sudo ./build/LumaChronDisplay
+```
+
+### 2. PC Controller (Python)
+Run on your control PC.
+*   **TCP Mode** (Development/WiFi):
+    ```bash
+    python pc_controller/pyApp.py --tcp <PI_IP_ADDRESS>
+    ```
+*   **Serial Mode** (Production/LoRa):
+    ```bash
+    python pc_controller/pyApp.py COM7
+    ```
